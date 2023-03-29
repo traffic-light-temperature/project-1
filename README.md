@@ -1,6 +1,14 @@
 # project-1
-traffic light temperature sensor using arduino
+Traffic light temperature sensor using arduino
 
+Our project is a heat detection sensor that will visually broadcast whether the temperature inside a designated area is unsuitable for working conditions.
+We believe that this sensor if implemented into working factories in both ireland and across the globe could benefit working conditions for both employees and employers alike.
+This would help aid the UN Sustainability Development Goals (SDGs) in there actions towards a healthier generation of workers and may cut down on the amount of mistreated employees across the world. 
+We believe that using our design we may be able to change the working world forever.
+As a group we are appauled that working conditions in some countries and in the past is not acceptable and we decided that we may be able to make a change to this environment.
+
+
+Arduino Code
 #include <math.h>
 
 const int B = 4275;              
@@ -8,14 +16,23 @@ const int R0 = 100000;
 const int pinTempSensor = A0;     
 
 #if defined(ARDUINO_ARCH_AVR)
+
 #define debug  Serial
+
 #elif defined(ARDUINO_ARCH_SAMD) ||  defined(ARDUINO_ARCH_SAM)
+
 #define debug  SerialUSB
+
 #else
+
 #define debug  Serial
+
 #endif
+
 #include <Wire.h>
+
   #include "rgb_lcd.h"
+  
 void setup()
 {
     Serial.begin(9600);
